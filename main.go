@@ -105,7 +105,7 @@ func setGithubEnvOutput(key string, value int) {
 			log.Println(err)
 		}
 		defer f.Close()
-		if _, err := f.WriteString(fmt.Sprintf(`%s=%d`, key,  value)); err != nil {
+		if _, err := f.WriteString(fmt.Sprintf("%s=%d\n", key,  value)); err != nil {
 			log.Println(err)
 		}
 }
